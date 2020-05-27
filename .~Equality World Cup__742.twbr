@@ -1,0 +1,2276 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook source-build='2020.1.2 (20201.20.0326.1623)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DashboardGridOverlay />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource inline='true' name='Clipboard_20200524T113746' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20200524T113746' name='Clipboard_20200524T113746leaf'>
+            <connection class='textscan' directory='/Users/soniameller/Documents/Mi Repositorio de Tableau/Fuentes de datos' filename='Clipboard_20200524T113746.txt' />
+          </named-connection>
+        </named-connections>
+        <relation connection='Clipboard_20200524T113746leaf' name='Clipboard_20200524T113746#txt' table='[Clipboard_20200524T113746#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator='&#9;'>
+            <column datatype='string' name='Country Name x' ordinal='0' />
+            <column datatype='integer' name='Avg. fifa_rank' ordinal='1' />
+            <column datatype='integer' name='Avg. gender_rank' ordinal='2' />
+            <column datatype='integer' name='fifa_rank' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Clipboard_20200524T113746#txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Name x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country Name x]</local-name>
+            <parent-name>[Clipboard_20200524T113746#txt]</parent-name>
+            <remote-alias>Country Name x</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg. fifa_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg. fifa_rank]</local-name>
+            <parent-name>[Clipboard_20200524T113746#txt]</parent-name>
+            <remote-alias>Avg. fifa_rank</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg. gender_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Avg. gender_rank]</local-name>
+            <parent-name>[Clipboard_20200524T113746#txt]</parent-name>
+            <remote-alias>Avg. gender_rank</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fifa_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fifa_rank]</local-name>
+            <parent-name>[Clipboard_20200524T113746#txt]</parent-name>
+            <remote-alias>fifa_rank</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg. fifa rank' datatype='integer' name='[Avg. fifa_rank]' role='measure' type='quantitative' />
+      <column caption='Avg. gender rank' datatype='integer' name='[Avg. gender_rank]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Country Name x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.401887' measure-ordering='alphabetic' measure-percentage='0.598113' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='gender-fifa-dataset' inline='true' name='federated.106ibsu01t65iq18tefiw00sly1n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='gender-fifa-dataset' name='textscan.0oflldb1dpqx4v1c48j0a0n4p11l'>
+            <connection class='textscan' directory='/Users/soniameller/ironhack/data/projects/equality-worldcup' filename='gender-fifa-dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0oflldb1dpqx4v1c48j0a0n4p11l' name='gender-fifa-probabilities.csv' table='[gender-fifa-probabilities#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Country ISO3' ordinal='0' />
+            <column datatype='string' name='Country Name_x' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='real' name='Index' ordinal='3' />
+            <column datatype='real' name='gender_rank' ordinal='4' />
+            <column datatype='string' name='Gender' ordinal='5' />
+            <column datatype='string' name='Country Name_y' ordinal='6' />
+            <column datatype='integer' name='fifa_rank' ordinal='7' />
+            <column datatype='integer' name='Total Points  PTS' ordinal='8' />
+            <column datatype='real' name='Previous Points  Prev.Pts' ordinal='9' />
+            <column datatype='integer' name='+/-' ordinal='10' />
+            <column datatype='real' name='p' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country ISO3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country ISO3]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Country ISO3</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Name_x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country Name_x]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Country Name_x</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Index]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Index</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gender_rank]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>gender_rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Name_y</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country Name_y]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Country Name_y</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fifa_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fifa_rank]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>fifa_rank</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Points  PTS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Points  PTS]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Total Points  PTS</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous Points  Prev.Pts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Previous Points  Prev.Pts]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>Previous Points  Prev.Pts</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>+/-</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[+/-]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>+/-</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p]</local-name>
+            <parent-name>[gender-fifa-probabilities.csv]</parent-name>
+            <remote-alias>p</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <semantic-values semantic-role='[Country].[Name]'>
+          <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+          <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+          <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+          <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+          <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+          <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+          <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+          <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+          <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+          <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+          <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+          <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+          <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+          <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+          <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+          <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+          <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+          <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+          <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+          <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+          <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+          <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+          <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+          <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+          <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+          <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+          <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+          <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+          <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+          <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+          <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+          <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+          <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+          <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+          <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+          <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+          <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+          <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+          <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+          <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+          <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+          <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+          <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+          <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+          <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+          <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+          <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+          <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+          <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+        </semantic-values>
+      </column>
+      <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Name y' datatype='string' name='[Country Name_y]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+      <column caption='Gender Rank' datatype='real' name='[gender_rank]' role='measure' type='quantitative' />
+      <column caption='P' datatype='real' name='[p]' role='measure' type='quantitative' />
+      <group caption='Action (Country ISO3)' hidden='true' name='[Action (Country ISO3)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country ISO3]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Country ISO3,Country Name x)' hidden='true' name='[Action (Country ISO3,Country Name x)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country ISO3]' />
+          <groupfilter function='level-members' level='[Country Name_x]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Country ISO31,Country Name x)' hidden='true' name='[Action (Country ISO31,Country Name x)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country ISO3]' />
+          <groupfilter function='level-members' level='[Country Name_x]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Country Name x)' hidden='true' name='[Action (Country Name x)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country Name_x]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Country Name x,Gender)' hidden='true' name='[Action (Country Name x,Gender)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country Name_x]' />
+          <groupfilter function='level-members' level='[Gender]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.401887' measure-ordering='alphabetic' measure-percentage='0.598113' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter1' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet'>
+        <exclude-sheet name=' Men Avg. Fifa ranking' />
+        <exclude-sheet name='Avg .Gender gap Ranking' />
+        <exclude-sheet name='Avg, index' />
+        <exclude-sheet name='Table' />
+        <exclude-sheet name='Top 15 female fifa' />
+        <exclude-sheet name='Women Avg. Fifa ranking ' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Map,Scatter,Table,Top 15 female fifa' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter2' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value=' Men Avg. Fifa ranking,Avg .Gender gap Ranking,Avg\, index,Map,Table,Top 15 female fifa,Top 15 male fifa,Women Avg. Fifa ranking ' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter3' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet'>
+        <exclude-sheet name=' Men Avg. Fifa ranking' />
+        <exclude-sheet name='Avg .Gender gap Ranking' />
+        <exclude-sheet name='Avg, index' />
+        <exclude-sheet name='Table' />
+        <exclude-sheet name='Women Avg. Fifa ranking ' />
+      </source>
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value=' Men Avg. Fifa ranking,Avg .Gender gap Ranking,Avg\, index,Map,Scatter,Top 15 female fifa,Top 15 male fifa,Women Avg. Fifa ranking ' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name=' Men Avg. Fifa ranking'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Men Avg fifa ranking</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Median' name='[med:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]'>
+            <groupfilter function='member' level='[none:Gender:nk]' member='&quot;M&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='19' />
+            <format attr='width' value='59' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.106ibsu01t65iq18tefiw00sly1n].[med:fifa_rank:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#bab0ac' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{354CD0CD-ED84-4575-8469-1479DCF3F56C}' />
+    </worksheet>
+    <worksheet name='Avg .Gender gap Ranking'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[gender_rank]' derivation='Avg' name='[avg:gender_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Gender Rank' datatype='real' name='[gender_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{80279E0A-04DF-41D5-BD57-1B99A9D29F95}' />
+    </worksheet>
+    <worksheet name='Avg, index'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Gender gap index</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Index]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Index]' derivation='Avg' name='[avg:Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='59' />
+            <format attr='height' value='19' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' palette='gray_warm_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' />
+              <text column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#bab0ac' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0CBD38F9-6333-4DC2-B78B-5C465BBDDB9B}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Index]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Index]' derivation='Avg' name='[avg:Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Country ISO3]' derivation='None' name='[none:Country ISO3:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country Name_x]' derivation='None' name='[none:Country Name_x:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.106ibsu01t65iq18tefiw00sly1n].[Longitude (generated)]' field-type='quantitative' max='-68146029.489820644' min='-84291969.45058237' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.106ibsu01t65iq18tefiw00sly1n].[Latitude (generated)]' field-type='quantitative' max='9426298.079902865' min='-890145.28910149168' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' palette='gray_warm_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' value='Search by Year'>
+              <formatted-text>
+                <run>Search by Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' />
+              <lod column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country ISO3:nk]' />
+              <lod column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]' />
+              <geometry column='[federated.106ibsu01t65iq18tefiw00sly1n].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.106ibsu01t65iq18tefiw00sly1n].[Latitude (generated)]</rows>
+        <cols>[federated.106ibsu01t65iq18tefiw00sly1n].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{2F1A0F8F-7FF2-4A2C-B1ED-004A408C30EC}' />
+    </worksheet>
+    <worksheet name='Scatter'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Index]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Index]' derivation='Avg' name='[avg:Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Avg' name='[avg:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Country Name_x]' derivation='None' name='[none:Country Name_x:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]'>
+            <groupfilter function='member' level='[none:Gender:nk]' member='&quot;F&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' field-type='quantitative' max='0.93144435509455481' min='0.55000000000000004' range-type='fixed' scale='log' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]' field-type='quantitative' reverse='true' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='cols' value='Tableau Light' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' palette='gray_warm_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' value='false' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='opacity' id='refline2' value='52' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' value='Filter by year' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Tableau Light' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' />
+              <lod column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline2' label-type='none' probability='95' scope='per-cell' symmetric='false' value-column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' z-order='1' />
+            <reference-line axis-column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' enable-instant-analytics='true' formula='average' id='refline3' label-type='automatic' probability='95' scope='per-table' value-column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='604' />
+                <format attr='maxwidth' value='604' />
+                <format attr='minheight' value='437' />
+                <format attr='maxheight' value='437' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='604' />
+                <format attr='maxwidth' value='604' />
+                <format attr='minheight' value='437' />
+                <format attr='maxheight' value='437' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]</rows>
+        <cols>[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]</cols>
+      </table>
+      <simple-id uuid='{EA7D0EB4-6F0E-425E-A386-83AAE9D19283}' />
+    </worksheet>
+    <worksheet name='Table'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Index]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total Points  PTS]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Index]' derivation='Avg' name='[avg:Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Index]' derivation='Avg' name='[avg:Index:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+            <column-instance column='[Total Points  PTS]' derivation='Avg' name='[avg:Total Points  PTS:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Avg' name='[avg:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_rank]' derivation='Avg' name='[avg:gender_rank:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[p]' derivation='Avg' name='[avg:p:qk]' pivot='key' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column caption='Gender Rank' datatype='real' name='[gender_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Country Name_x]' derivation='None' name='[none:Country Name_x:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column caption='P' datatype='real' name='[p]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:vtavg:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:p:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.106ibsu01t65iq18tefiw00sly1n].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:vtavg:qk]&quot;</bucket>
+              <bucket>&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]&quot;</bucket>
+              <bucket>&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Total Points  PTS:qk]&quot;</bucket>
+              <bucket>&quot;[federated.106ibsu01t65iq18tefiw00sly1n].[avg:p:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[avg:gender_rank:ok]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[avg:gender_rank:ok]' member='%null%' />
+                <groupfilter function='member' level='[avg:gender_rank:ok]' member='0.0' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Total Points  PTS:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[:Measure Names]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.106ibsu01t65iq18tefiw00sly1n].[:Measure Names]' value='87' />
+            <format attr='text-format' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:vtavg:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:p:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]' value='40' />
+            <format attr='width' field='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]' value='92' />
+            <format attr='width' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:ok]' value='44' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' />
+              <text column='[federated.106ibsu01t65iq18tefiw00sly1n].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:ok] / ([federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk] / [federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]))</rows>
+        <cols>[federated.106ibsu01t65iq18tefiw00sly1n].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{5802E650-A9B1-49B8-8C3F-216A85FE0858}' />
+    </worksheet>
+    <worksheet name='Top 15 female fifa'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Avg' name='[avg:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_rank]' derivation='Avg' name='[avg:gender_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column caption='Gender Rank' datatype='real' name='[gender_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Country Name_x]' derivation='None' name='[none:Country Name_x:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[fifa_rank]' derivation='Sum' name='[sum:fifa_rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]'>
+            <groupfilter count='15' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([fifa_rank])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country Name_x:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]' direction='ASC' using='[federated.106ibsu01t65iq18tefiw00sly1n].[sum:fifa_rank:qk]' />
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]' context='true'>
+            <groupfilter function='member' level='[none:Gender:nk]' member='&quot;F&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' palette='gray_warm_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' />
+              <tooltip column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]</rows>
+        <cols>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]</cols>
+      </table>
+      <simple-id uuid='{A277E84C-68C2-43D4-879D-288554C339F0}' />
+    </worksheet>
+    <worksheet name='Top 15 male fifa'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Avg' name='[avg:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_rank]' derivation='Avg' name='[avg:gender_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column caption='Gender Rank' datatype='real' name='[gender_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Country Name_x]' derivation='None' name='[none:Country Name_x:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[fifa_rank]' derivation='Sum' name='[sum:fifa_rank:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]'>
+            <groupfilter count='15' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([fifa_rank])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country Name_x:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]' direction='ASC' using='[federated.106ibsu01t65iq18tefiw00sly1n].[sum:fifa_rank:qk]' />
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]' context='true'>
+            <groupfilter function='member' level='[none:Gender:nk]' member='&quot;M&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' palette='gray_warm_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' />
+              <tooltip column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]</rows>
+        <cols>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Country Name_x:nk]</cols>
+      </table>
+      <simple-id uuid='{508570FA-F598-4BDE-AAE5-6B4D3ECE369C}' />
+    </worksheet>
+    <worksheet name='Women Avg. Fifa ranking '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Women Avg fifa ranking</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+            <column caption='Country ISO31' datatype='string' name='[Country ISO3]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;ALG&quot;' value='&quot;Algeria&quot;' />
+                <semantic-value key='&quot;ANG&quot;' value='&quot;Angola&quot;' />
+                <semantic-value key='&quot;BAH&quot;' value='&quot;Bahamas&quot;' />
+                <semantic-value key='&quot;BAN&quot;' value='&quot;Bangladesh&quot;' />
+                <semantic-value key='&quot;BHU&quot;' value='&quot;Bhutan&quot;' />
+                <semantic-value key='&quot;BOT&quot;' value='&quot;Botswana&quot;' />
+                <semantic-value key='&quot;BRU&quot;' value='&quot;Brunei Darussalam&quot;' />
+                <semantic-value key='&quot;BUL&quot;' value='&quot;Bulgaria&quot;' />
+                <semantic-value key='&quot;CAM&quot;' value='&quot;Cambodia&quot;' />
+                <semantic-value key='&quot;CGO&quot;' value='&quot;Democratic Republic of Congo&quot;' />
+                <semantic-value key='&quot;CHA&quot;' value='&quot;Chad&quot;' />
+                <semantic-value key='&quot;CHI&quot;' value='&quot;Chile&quot;' />
+                <semantic-value key='&quot;CRC&quot;' value='&quot;Costa Rica&quot;' />
+                <semantic-value key='&quot;CRO&quot;' value='&quot;Croatia&quot;' />
+                <semantic-value key='&quot;DEN&quot;' value='&quot;Denmark&quot;' />
+                <semantic-value key='&quot;ENG&quot;' value='&quot;United Kingdom&quot;' />
+                <semantic-value key='&quot;FIJ&quot;' value='&quot;Fiji&quot;' />
+                <semantic-value key='&quot;GAM&quot;' value='&quot;Gambia&quot;' />
+                <semantic-value key='&quot;GER&quot;' value='&quot;Germany&quot;' />
+                <semantic-value key='&quot;GRE&quot;' value='&quot;Greece&quot;' />
+                <semantic-value key='&quot;GUA&quot;' value='&quot;Guatemala&quot;' />
+                <semantic-value key='&quot;GUI&quot;' value='&quot;Guinea&quot;' />
+                <semantic-value key='&quot;HON&quot;' value='&quot;Honduras&quot;' />
+                <semantic-value key='&quot;KSA&quot;' value='&quot;Saudi Arabia&quot;' />
+                <semantic-value key='&quot;KUW&quot;' value='&quot;Kuwait&quot;' />
+                <semantic-value key='&quot;LES&quot;' value='&quot;Lesotho&quot;' />
+                <semantic-value key='&quot;LIB&quot;' value='&quot;Lebanon&quot;' />
+                <semantic-value key='&quot;MAD&quot;' value='&quot;Madagascar&quot;' />
+                <semantic-value key='&quot;MAS&quot;' value='&quot;Malaysia&quot;' />
+                <semantic-value key='&quot;MRI&quot;' value='&quot;Mauritius&quot;' />
+                <semantic-value key='&quot;MTN&quot;' value='&quot;Mauritania&quot;' />
+                <semantic-value key='&quot;MYA&quot;' value='&quot;Myanmar&quot;' />
+                <semantic-value key='&quot;NCA&quot;' value='&quot;Nicaragua&quot;' />
+                <semantic-value key='&quot;NED&quot;' value='&quot;Netherlands&quot;' />
+                <semantic-value key='&quot;NEP&quot;' value='&quot;Nepal&quot;' />
+                <semantic-value key='&quot;PAR&quot;' value='&quot;Paraguay&quot;' />
+                <semantic-value key='&quot;PHI&quot;' value='&quot;Philippines&quot;' />
+                <semantic-value key='&quot;POR&quot;' value='&quot;Portugal&quot;' />
+                <semantic-value key='&quot;RSA&quot;' value='&quot;South Africa&quot;' />
+                <semantic-value key='&quot;SIN&quot;' value='&quot;Singapore&quot;' />
+                <semantic-value key='&quot;SRI&quot;' value='&quot;Sri Lanka&quot;' />
+                <semantic-value key='&quot;SUI&quot;' value='&quot;Switzerland&quot;' />
+                <semantic-value key='&quot;TAN&quot;' value='&quot;Tanzania&quot;' />
+                <semantic-value key='&quot;TOG&quot;' value='&quot;Togo&quot;' />
+                <semantic-value key='&quot;TRI&quot;' value='&quot;Trinidad and Tobago&quot;' />
+                <semantic-value key='&quot;URU&quot;' value='&quot;Uruguay&quot;' />
+                <semantic-value key='&quot;VIE&quot;' value='&quot;Viet Nam&quot;' />
+                <semantic-value key='&quot;ZAM&quot;' value='&quot;Zambia&quot;' />
+                <semantic-value key='&quot;ZIM&quot;' value='&quot;Zimbabwe&quot;' />
+              </semantic-values>
+            </column>
+            <column caption='Country Name x' datatype='string' name='[Country Name_x]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gender1' datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[fifa_rank]' derivation='Avg' name='[avg:fifa_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Fifa Rank' datatype='integer' name='[fifa_rank]' role='measure' type='quantitative' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country ISO3]' />
+              <groupfilter function='level-members' level='[Country Name_x]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]'>
+            <groupfilter function='level-members' level='[Country Name_x]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]'>
+            <groupfilter function='member' level='[none:Gender:nk]' member='&quot;F&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' context='true' filter-group='3'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2008' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[none:Gender:nk]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO3,Country Name x)]</column>
+            <column>[federated.106ibsu01t65iq18tefiw00sly1n].[Action (Country ISO31,Country Name x)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:fifa_rank:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#bab0ac' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D1F5F10C-34B8-4C69-BC19-024757859724}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='2000' maxwidth='1000' minheight='2000' minwidth='1000' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='gender-fifa-dataset' name='federated.106ibsu01t65iq18tefiw00sly1n' />
+      </datasources>
+      <datasource-dependencies datasource='federated.106ibsu01t65iq18tefiw00sly1n'>
+        <column aggregation='Sum' caption='Year1' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+        <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='3850' id='21' type='empty' w='13800' x='34200' y='7050'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='dotted' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#463e3d53' />
+          </zone-style>
+        </zone>
+        <zone h='5800' id='13' param='horz' type='layout-flow' w='100600' x='-500' y='250'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#463e3d' />
+          </zone-style>
+        </zone>
+        <zone h='14650' id='3' name='Map' show-title='false' w='45800' x='1800' y='11650' />
+        <zone h='20300' id='4' name='Scatter' show-title='false' w='49300' x='50000' y='8050' />
+        <zone h='2850' id='7' mode='dropdown' name='Scatter' param='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' type='filter' values='database' w='16000' x='81500' y='1800' />
+        <zone forceUpdate='true' h='1700' id='14' type='text' w='34500' x='9300' y='2300'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontsize='20'>Equality World Cup</run>
+          </formatted-text>
+        </zone>
+        <zone friendly-name='GENDER GAP INDEX' h='4000' id='16' param='vert' type='layout-flow' w='13900' x='2000' y='7000'>
+          <zone fixed-size='24' forceUpdate='true' h='1600' id='15' is-fixed='true' type='text' w='13700' x='2100' y='7050'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000'>GENDER GAP INDEX</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='25' h='1650' id='8' is-fixed='true' name='Avg, index' show-title='false' w='13700' x='2100' y='8650'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='dotted' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone friendly-name='GENDER GAP RANK' h='3900' id='18' param='vert' type='layout-flow' w='14100' x='17900' y='7000'>
+          <zone fixed-size='24' h='1600' id='19' is-fixed='true' type='text' w='13900' x='18000' y='7050'>
+            <formatted-text>
+              <run fontcolor='#000000'>GENDER GAP RANK</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='1400' id='17' name='Avg .Gender gap Ranking' show-title='false' w='13900' x='18000' y='8650'>
+            <layout-cache fixed-size-h='20' fixed-size-w='60' type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='dotted' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='1500' id='20' type='text' w='21200' x='55800' y='6500'>
+          <formatted-text>
+            <run fontcolor='#000000'>WOMEN FIFA RANK / GENDER INDEX</run>
+          </formatted-text>
+        </zone>
+        <zone h='1500' id='22' type='text' w='10000' x='36700' y='7050'>
+          <formatted-text>
+            <run fontcolor='#000000'>FIFA RANKING</run>
+          </formatted-text>
+        </zone>
+        <zone h='1950' id='23' name=' Men Avg. Fifa ranking' show-title='false' w='6200' x='34700' y='9650' />
+        <zone h='1400' id='25' name='Women Avg. Fifa ranking ' show-title='false' w='6500' x='41300' y='9650' />
+        <zone h='850' id='26' is-centered='0' is-scaled='1' param='/Users/soniameller/Downloads/female_icon.png' type='bitmap' w='1000' x='43400' y='8600' />
+        <zone h='650' id='27' is-centered='0' is-scaled='1' param='/Users/soniameller/Downloads/male_icon.png' type='bitmap' w='1300' x='37700' y='8650' />
+        <zone h='29700' id='28' name='Table' show-title='false' w='47600' x='51800' y='30050' />
+        <zone h='13850' id='29' name='Top 15 female fifa' show-title='false' w='45900' x='1800' y='29900' />
+        <zone h='3150' id='30' name='Top 15 female fifa' pane-specification-id='0' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' type='color' w='18500' x='29900' y='26100' />
+        <zone forceUpdate='true' h='1500' id='31' type='text' w='18700' x='1800' y='27000'>
+          <formatted-text>
+            <run fontcolor='#000000'>TOP 15 TEAMS IN FIFA RANKING</run>
+          </formatted-text>
+        </zone>
+        <zone h='1500' id='32' type='text' w='10000' x='2200' y='28800'>
+          <formatted-text>
+            <run fontsize='11'>WOMEN</run>
+          </formatted-text>
+        </zone>
+        <zone h='1500' id='33' type='text' w='10000' x='2100' y='43800'>
+          <formatted-text>
+            <run fontsize='11'>MEN</run>
+          </formatted-text>
+        </zone>
+        <zone h='5350' id='36' is-centered='0' is-scaled='1' param='/Users/soniameller/Downloads/4fd43b707b099df22476161d8838e38e (2).png' type='bitmap' w='19300' x='100' y='700' />
+        <zone h='14250' id='40' name='Top 15 male fifa' show-title='false' w='45000' x='1700' y='45800' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2700' minheight='2700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='46' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99200' id='45' param='vert' type='layout-flow' w='98400' x='800' y='400'>
+                <zone fixed-size='107' h='5350' id='36' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/soniameller/Downloads/4fd43b707b099df22476161d8838e38e (2).png' type='bitmap' w='19300' x='100' y='700'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1700' id='14' type='text' w='34500' x='9300' y='2300'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontsize='20'>Equality World Cup</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1500' id='20' type='text' w='21200' x='55800' y='6500'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>WOMEN FIFA RANK / GENDER INDEX</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='24' forceUpdate='true' h='1600' id='15' type='text' w='13700' x='2100' y='7050'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000'>GENDER GAP INDEX</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='24' h='1600' id='19' type='text' w='13900' x='18000' y='7050'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>GENDER GAP RANK</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1500' id='22' type='text' w='10000' x='36700' y='7050'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>FIFA RANKING</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2850' id='7' mode='dropdown' name='Scatter' param='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' type='filter' values='database' w='16000' x='81500' y='1800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='20300' id='4' is-fixed='true' name='Scatter' show-title='false' w='49300' x='50000' y='8050'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='17' h='850' id='26' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/soniameller/Downloads/female_icon.png' type='bitmap' w='1000' x='43400' y='8600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='25' h='1650' id='8' is-fixed='true' name='Avg, index' show-title='false' w='13700' x='2100' y='8650'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='1400' id='17' is-fixed='true' name='Avg .Gender gap Ranking' show-title='false' w='13900' x='18000' y='8650'>
+                  <layout-cache fixed-size-h='20' fixed-size-w='60' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='13' h='650' id='27' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/soniameller/Downloads/male_icon.png' type='bitmap' w='1300' x='37700' y='8650'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='39' h='1950' id='23' is-fixed='true' name=' Men Avg. Fifa ranking' show-title='false' w='6200' x='34700' y='9650'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='28' h='1400' id='25' is-fixed='true' name='Women Avg. Fifa ranking ' show-title='false' w='6500' x='41300' y='9650'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='14650' id='3' is-fixed='true' name='Map' show-title='false' w='45800' x='1800' y='11650'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='1500' id='31' type='text' w='18700' x='1800' y='27000'>
+                  <formatted-text>
+                    <run fontcolor='#000000'>TOP 15 TEAMS IN FIFA RANKING</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1500' id='32' type='text' w='10000' x='2200' y='28800'>
+                  <formatted-text>
+                    <run fontsize='11'>WOMEN</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='277' h='13850' id='29' is-fixed='true' name='Top 15 female fifa' show-title='false' w='45900' x='1800' y='29900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3150' id='30' name='Top 15 female fifa' pane-specification-id='0' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' type='color' w='18500' x='29900' y='26100'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='29700' id='28' is-fixed='true' name='Table' show-title='false' w='47600' x='51800' y='30050'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='1500' id='33' type='text' w='10000' x='2100' y='43800'>
+                  <formatted-text>
+                    <run fontsize='11'>MEN</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='14250' id='40' is-fixed='true' name='Top 15 male fifa' show-title='false' w='45000' x='1700' y='45800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B1B23C93-821F-4A4F-8E4A-EFDA091B4CA3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{852B863D-1083-4CA9-A200-5C0BAF2F3459}' />
+    </window>
+    <window class='worksheet' name='Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{66DF626E-184E-4865-A02E-32985721636F}' />
+    </window>
+    <window class='worksheet' name='Scatter'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{481B34B8-40CF-4494-AAB1-9A3E6EC0A9AD}' />
+    </window>
+    <window class='worksheet' name='Avg, index'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:Index:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E0162A3-E608-4642-B27A-920E94446121}' />
+    </window>
+    <window class='worksheet' name='Avg .Gender gap Ranking'>
+      <cards>
+        <edge name='left'>
+          <strip size='244'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9230B117-9400-4AFA-AEE8-D2F3897C12DB}' />
+    </window>
+    <window class='worksheet' name=' Men Avg. Fifa ranking'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B010C51-4BD6-4A8E-A0F5-E6553F8A497B}' />
+    </window>
+    <window class='worksheet' name='Women Avg. Fifa ranking '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A1422C22-B8C1-410E-9799-E6541B76B7C2}' />
+    </window>
+    <window class='worksheet' name='Top 15 female fifa'>
+      <cards>
+        <edge name='left'>
+          <strip size='188'>
+            <card size='31' type='pages' />
+            <card size='138' type='filters' />
+            <card size='197' type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C02C5687-01B2-4DF6-AD06-500976A63DC8}' />
+    </window>
+    <window class='worksheet' name='Top 15 male fifa'>
+      <cards>
+        <edge name='left'>
+          <strip size='188'>
+            <card size='31' type='pages' />
+            <card size='138' type='filters' />
+            <card size='197' type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.106ibsu01t65iq18tefiw00sly1n].[none:Year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.106ibsu01t65iq18tefiw00sly1n].[avg:gender_rank:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{778193FD-FA75-450D-935A-0AB2459327D8}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Men Avg. Fifa ranking' />
+        <viewpoint name='Avg .Gender gap Ranking' />
+        <viewpoint name='Avg, index' />
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Scatter'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Table' />
+        <viewpoint name='Top 15 female fifa'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 15 male fifa'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Women Avg. Fifa ranking ' />
+      </viewpoints>
+      <active id='7' />
+      <grid grid-overlay-mode='on' />
+      <simple-id uuid='{0F905068-2BD0-484C-A988-8DE044294684}' />
+    </window>
+  </windows>
+</workbook>
